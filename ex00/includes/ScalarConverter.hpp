@@ -20,7 +20,7 @@ class ScalarConverter {
 		~ScalarConverter();
 
 
-ScalarConverter &	operator=(ScalarConverter const &original_copy);
+ScalarConverter 	&operator=(ScalarConverter const &original_copy);
 
 public:
 		static void	convert(str &lit);
