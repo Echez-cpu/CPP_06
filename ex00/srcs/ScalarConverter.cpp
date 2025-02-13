@@ -100,8 +100,50 @@ static void		error() {
 
 
 
+static void		checkInput(str input) {
+	if (std::isprint(input[0]) && !std::isdigit(input[0])) {
+		if (input.length() == 1)
+			charConvert(input);
+		else if (input == "-inf" || input == "-inff")
+			minInfConvert();
+		else if (input == "+inf" || input == "+inff")
+			maxInfConvert();
+		else if (input == "nan" || input == "nanf")
+			nanConvert();
+		else
+			error();
+	}
+	else if (input[input.length() - 1] == 'f') {
+		long unsigned int	i = 0;
+		while (i < input.length() - 1 && (std::isdigit(input[i]) || input[i] == '.'))
+			i++;
+		if (i == input.length() - 1)
+			floatConvert(input);
+		else
+			error();
+	}
+	else if (input.find('.') != std::string::npos) {
+		long unsigned int	i = 0;
+		while (std::isdigit(input[i]) || input[i] == '.')
+			i++;
+		if (i == input.length())
+			doubleConvert(input);
+		else
+			error();
+	}
+	else if (std::isdigit(input[0])) {
+		long unsigned int	i = 0;
+		while (std::isdigit(input[i]))
+			i++;
+		if (i == input.length())
+			intConvert(input);
+		else
+			error();
+	}
+	else
+		error();
+}
 
-
-
-
-
+void	ScalarConverter::convert(str input) {
+	checkInput(input);
+}
