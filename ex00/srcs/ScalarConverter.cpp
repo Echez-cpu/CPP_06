@@ -170,7 +170,7 @@ static void		checkInput(str input) {
 	if (input[0] == '-' && isValidFloatFormat(input.substr(1)))
            		 floatConvertion(input);
 
-		if (!isValidFloatFormat(input))
+		else if (!isValidFloatFormat(input))
 		      nanConvertion2();
         				
 		else
