@@ -154,7 +154,14 @@ static void		checkInput(str input) {
 		else if (input == "nan" || input == "nanf")
 			nanConvertion();
 		else if ((input[0] == '-' && std::isdigit(input[1])))	
+		{
+			int value;
+    			if (!isValidInt(input, value))
+        			nanConvertion3();
+			
 			intConvertion(input);	
+		}
+				
 		else
 			error();
 	}
