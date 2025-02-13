@@ -158,7 +158,7 @@ static void		checkInput(str input) {
 			int value;
     			if (!isValidInt(input, value))
         			nanConvertion3();
-			
+			else
 			intConvertion(input);	
 		}
 				
