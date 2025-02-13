@@ -9,7 +9,7 @@
 #include <float.h>
 #include <cstdlib>
 
-typedef std::string str
+typedef std::string str;
 
 
 class ScalarConverter {
