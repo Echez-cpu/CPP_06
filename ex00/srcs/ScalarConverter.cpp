@@ -110,7 +110,7 @@ static void		checkInput(str input) {
 		else if (input == "+inf" || input == "+inff")
 			maxInfConvertion();
 		else if (input == "nan" || input == "nanf")
-			nanConvert();
+			nanConvertion();
 		else
 			error();
 	}
