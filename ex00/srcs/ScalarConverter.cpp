@@ -36,7 +36,7 @@ static void floatConvertion(str input) {
         std::cout << "char: non-displayable" << std::endl;
     }
     else {
-        std::cout << "char: " << static_cast<char>(intNum) << std::endl;
+        std::cout << "char: '" << static_cast<char>(intNum) << "'" << std::endl;
     }
     
     std::cout << "int: " << intNum << std::endl;
@@ -58,7 +58,7 @@ static void doubleConvertion(str input) {
         std::cout << "char: non-displayable" << std::endl;
     }
     else {
-        std::cout << "char: " << static_cast<char>(intNum) << std::endl;
+        std::cout << "char: '" << static_cast<char>(intNum) << "'" << std::endl;
     }
     
     std::cout << "int: " << intNum << std::endl;
