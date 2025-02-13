@@ -173,7 +173,7 @@ static void		checkInput(str input) {
 			doubleConvertion(input);
 	}
 
-     else if (std::isdigit(input[0])) {
+     else if (std::isdigit(input[0]) || (input[0] == '-' && std::isdigit(input[1]))) {
 	    int value;
     	if (!isValidInt(input, value))
         	nanConvertion3();
