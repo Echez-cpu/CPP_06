@@ -144,7 +144,7 @@ static void		error() {
 
 
 static void		checkInput(str input) {
-	if (std::isprint(input[0]) && !std::isdigit(input[0])) {
+	if (std::isprint(input[0]) && !std::isdigit(input[0]) && input[input.length() - 1] != 'f') {
 		if (input.length() == 1)
 			charConvertion(input);
 		else if (input == "-inf" || input == "-inff")
@@ -153,7 +153,7 @@ static void		checkInput(str input) {
 			maxInfConvertion();
 		else if (input == "nan" || input == "nanf")
 			nanConvertion();
-		else if ((input[0] == '-' && std::isdigit(input[1]) && input[input.length() - 1] != 'f'))	
+		else if ((input[0] == '-' && std::isdigit(input[1])))	
 		{
 			int value;
     			if (!isValidInt(input, value))
