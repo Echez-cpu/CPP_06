@@ -16,7 +16,7 @@ static void		intConvertion(str input) {
 	else if (num < 32 || num == 127)
 		std::cout << "char: non-displayable" << std::endl;
 	else
-		std::cout << "char: " << static_cast<char>(num) << std::endl;
+		std::cout << "char: '" << static_cast<char>(num) << "'" << std::endl;
 	std::cout << "int: " << num << std::endl;
 	std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(num) << "f" << std::endl;
 	std::cout << "double: " << std::fixed << std::setprecision(1) << static_cast<double>(num) << std::endl;
