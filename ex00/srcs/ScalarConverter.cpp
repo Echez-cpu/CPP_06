@@ -153,7 +153,7 @@ static void		checkInput(str input) {
 			maxInfConvertion();
 		else if (input == "nan" || input == "nanf")
 			nanConvertion();
-		else if ((input[0] == '-' && std::isdigit(input[1])))	
+		else if ((input[0] == '-' && std::isdigit(input[1]) && input[input.length() - 1] != 'f'))	
 		{
 			int value;
     			if (!isValidInt(input, value))
