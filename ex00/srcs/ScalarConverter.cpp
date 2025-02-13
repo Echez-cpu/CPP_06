@@ -145,14 +145,9 @@ static void		error() {
 
 static void		checkInput(str input) {
 	if (std::isprint(input[0]) && !std::isdigit(input[0]) && input[input.length() - 1] != 'f') {
-		if (input.length() == 1)
+		else if (input.length() == 1)
 			charConvertion(input);
-		if (input == "-inf" || input == "-inff")
-			minInfConvertion();
-		if (input == "+inf" || input == "+inff")
-			maxInfConvertion();
-		if (input == "nan" || input == "nanf")
-			nanConvertion();
+			
 		else if ((input[0] == '-' && std::isdigit(input[1])))	
 		{
 			int value;
@@ -165,6 +160,14 @@ static void		checkInput(str input) {
 		else
 			error();
 	}
+
+            else if (input == "-inf" || input == "-inff")
+			minInfConvertion();
+	    else if (input == "+inf" || input == "+inff")
+			maxInfConvertion();
+	    else if (input == "nan" || input == "nanf")
+			nanConvertion();
+		
 	else if (input[input.length() - 1] == 'f') {
 
 	if (input[0] == '-' && isValidFloatFormat(input.substr(1)))
