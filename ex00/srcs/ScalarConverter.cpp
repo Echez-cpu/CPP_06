@@ -167,6 +167,9 @@ static void		checkInput(str input) {
 	}
 	else if (input[input.length() - 1] == 'f') {
 
+	if (input[0] == '-' && isValidFloatFormat(input.substr(1))) {
+           		 floatConvertion(input);
+
 		if (!isValidFloatFormat(input))
 		      nanConvertion2();
         				
