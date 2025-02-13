@@ -179,7 +179,7 @@ static void		checkInput(str input) {
         	nanConvertion3();
 			
 	else
-       	 intConvert(input);
+       	 intConvertion(input);
 }
 		
 	else
