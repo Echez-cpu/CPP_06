@@ -146,5 +146,5 @@ static void		checkInput(str input) {
 }
 
 void	ScalarConverter::convert(str &lit) {
-	checkInput(input);
+	checkInput(lit);
 }
