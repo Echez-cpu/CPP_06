@@ -138,11 +138,6 @@ static void		checkInput(str input) {
 		if (!isValidFloatFormat(input))
 		      nanConvertion2();
         				
-		/*long unsigned int	i = 0;
-		while (i < input.length() - 1 && (std::isdigit(input[i]) || input[i] == '.'))
-			i++;
-		if (i == input.length() - 1)
-			floatConvertion(input);*/
 		else
 			floatConvertion(input);
 	}
@@ -151,11 +146,6 @@ static void		checkInput(str input) {
 		if (!isValidFloatFormat(input))
 		      nanConvertion2();		
 			
-		/*long unsigned int	i = 0;
-		while (std::isdigit(input[i]) || input[i] == '.')
-			i++;
-		if (i == input.length())
-			doubleConvertion(input);*/
 		else
 			doubleConvertion(input);
 	}
