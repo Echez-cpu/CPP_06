@@ -92,6 +92,25 @@ static void		nanConvertion() {
 	std::cout << "double: nan" << std::endl;
 }
 
+static void		nanConvertion2() {
+	std::cout << "char: impossible" << std::endl;
+	std::cout << "int:  impossible" << std::endl;
+	std::cout << "float: error: invalid input" << std::endl;
+	std::cout << "double: error: invalid input" << std::endl;
+}
+
+static bool isValidFloatFormat(const str  &input) {
+    int dotCount = 0;
+    for (long unsigned int i = 0; i < input.length(); i++) {
+        if (input[i] == '.')
+            dotCount++;
+        else if (!std::isdigit(input[i]) && input[i] != 'f')  
+            return false;
+    }
+    return dotCount <= 1;
+}
+
+
 static void		error() {
 	std::cout << "char: impossible" << std::endl;
 	std::cout << "int: " << 0 << std::endl;
@@ -115,24 +134,33 @@ static void		checkInput(str input) {
 			error();
 	}
 	else if (input[input.length() - 1] == 'f') {
-		long unsigned int	i = 0;
+
+		if (!isValidFloatFormat(input))
+		      nanConvertion2();
+        				
+		/*long unsigned int	i = 0;
 		while (i < input.length() - 1 && (std::isdigit(input[i]) || input[i] == '.'))
 			i++;
 		if (i == input.length() - 1)
-			floatConvertion(input);
+			floatConvertion(input);*/
 		else
-			error();
+			floatConvertion(input);
 	}
 	else if (input.find('.') != std::string::npos) {
-		long unsigned int	i = 0;
+
+		if (!isValidFloatFormat(input))
+		      nanConvertion2();		
+			
+		/*long unsigned int	i = 0;
 		while (std::isdigit(input[i]) || input[i] == '.')
 			i++;
 		if (i == input.length())
-			doubleConvertion(input);
+			doubleConvertion(input);*/
 		else
-			error();
+			doubleConvertion(input);
 	}
 	else if (std::isdigit(input[0])) {
+
 		long unsigned int	i = 0;
 		while (std::isdigit(input[i]))
 			i++;
