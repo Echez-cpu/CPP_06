@@ -67,12 +67,25 @@ static void doubleConvertion(str input) {
 }
 
 
-
 static void		minInfConvertion() {
 	std::cout << "char: impossible" << std::endl;
 	std::cout << "int: " << INT_MIN << std::endl;
 	std::cout << "float: " << __FLT_MIN__ << std::endl;
 	std::cout << "double: " << __DBL_MIN__ << std::endl;
+}
+
+
+static bool isValidInt(const std::string &param, int &result) {
+    char *end;
+    errno = 0;
+    long n = strtol(param.c_str(), &end, 10);
+    
+    if (errno == ERANGE || n > INT_MAX || n < INT_MIN) {
+        return false;
+    }
+    
+    result = static_cast<int>(n);
+    return *end == '\0';  
 }
 
 
@@ -98,6 +111,16 @@ static void		nanConvertion2() {
 	std::cout << "float: error: invalid input" << std::endl;
 	std::cout << "double: error: invalid input" << std::endl;
 }
+
+
+static void		nanConvertion3() {
+	std::cout << "char: impossible" << std::endl;
+	std::cout << "int: error: overflow or something else" << std::endl;
+	std::cout << "float: error: invalid" << std::endl;
+	std::cout << "double: error: invalid" << std::endl;
+}
+
+
 
 static bool isValidFloatFormat(const str  &input) {
     int dotCount = 0;
@@ -149,16 +172,16 @@ static void		checkInput(str input) {
 		else
 			doubleConvertion(input);
 	}
-	else if (std::isdigit(input[0])) {
 
-		long unsigned int	i = 0;
-		while (std::isdigit(input[i]))
-			i++;
-		if (i == input.length())
-			intConvertion(input);
-		else
-			error();
-	}
+     else if (std::isdigit(input[0])) {
+	    int value;
+    	if (!isValidInt(input, value))
+        	nanConvertion3();
+			
+	else
+       	 intConvert(input);
+}
+		
 	else
 		error();
 }
