@@ -97,17 +97,18 @@ static void		error() {
 	std::cout << "int: " << 0 << std::endl;
 	std::cout << "float: " << 0 << std::endl;
 	std::cout << "double: " << 0 << std::endl;
+}
 
 
 
 static void		checkInput(str input) {
 	if (std::isprint(input[0]) && !std::isdigit(input[0])) {
 		if (input.length() == 1)
-			charConvert(input);
+			charConvertion(input);
 		else if (input == "-inf" || input == "-inff")
-			minInfConvert();
+			minInfConvertion();
 		else if (input == "+inf" || input == "+inff")
-			maxInfConvert();
+			maxInfConvertion();
 		else if (input == "nan" || input == "nanf")
 			nanConvert();
 		else
@@ -118,7 +119,7 @@ static void		checkInput(str input) {
 		while (i < input.length() - 1 && (std::isdigit(input[i]) || input[i] == '.'))
 			i++;
 		if (i == input.length() - 1)
-			floatConvert(input);
+			floatConvertion(input);
 		else
 			error();
 	}
@@ -127,7 +128,7 @@ static void		checkInput(str input) {
 		while (std::isdigit(input[i]) || input[i] == '.')
 			i++;
 		if (i == input.length())
-			doubleConvert(input);
+			doubleConvertion(input);
 		else
 			error();
 	}
@@ -136,7 +137,7 @@ static void		checkInput(str input) {
 		while (std::isdigit(input[i]))
 			i++;
 		if (i == input.length())
-			intConvert(input);
+			intConvertion(input);
 		else
 			error();
 	}
