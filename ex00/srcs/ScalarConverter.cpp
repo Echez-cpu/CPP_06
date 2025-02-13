@@ -40,8 +40,8 @@ static void floatConvertion(str input) {
     }
     
     std::cout << "int: " << intNum << std::endl;
-    std::cout << "float: " << std::fixed << std::setprecision(2) << num << "f" << std::endl;
-    std::cout << "double: " << std::fixed << std::setprecision(2) << static_cast<double>(num) << std::endl;
+    std::cout << "float: " << std::fixed << std::setprecision(1) << num << "f" << std::endl;
+    std::cout << "double: " << std::fixed << std::setprecision(1) << static_cast<double>(num) << std::endl;
 }
 
 
@@ -62,8 +62,8 @@ static void doubleConvertion(str input) {
     }
     
     std::cout << "int: " << intNum << std::endl;
-    std::cout << "float: " << std::fixed << std::setprecision(2) << static_cast<float>(num) << "f" << std::endl; 
-    std::cout << "double: " << std::fixed << std::setprecision(2) << num << std::endl;
+    std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(num) << "f" << std::endl; 
+    std::cout << "double: " << std::fixed << std::setprecision(1) << num << std::endl;
 }
 
 
