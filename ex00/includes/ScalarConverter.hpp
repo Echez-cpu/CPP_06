@@ -8,6 +8,7 @@
 #include <limits.h>
 #include <float.h>
 #include <cstdlib>
+#include <cerrno>
 
 typedef std::string str;
 
