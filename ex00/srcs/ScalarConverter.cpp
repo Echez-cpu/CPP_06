@@ -87,9 +87,9 @@ static void		maxInfConvertion() {
 
 static void		nanConvertion() {
 	std::cout << "char: impossible" << std::endl;
-	std::cout << "int: " << 0 << std::endl;
-	std::cout << "float: " << 0 << std::endl;
-	std::cout << "double: " << 0 << std::endl;
+	std::cout << "int:  impossible" << std::endl;
+	std::cout << "float: nanf" << std::endl;
+	std::cout << "double: nan" << std::endl;
 }
 
 static void		error() {
