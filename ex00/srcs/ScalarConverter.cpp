@@ -148,8 +148,7 @@ static void		checkInput(str input) {
 		else if (input.length() == 1)
 			charConvertion(input);
 			
-		else if ((input[0] == '-' && std::isdigit(input[1])))	
-		{
+		else if ((input[0] == '-' && std::isdigit(input[1]))) {
 			int value;
     			if (!isValidInt(input, value))
         			nanConvertion3();
