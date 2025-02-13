@@ -145,7 +145,8 @@ static void		error() {
 
 static void		checkInput(str input) {
 	if (std::isprint(input[0]) && !std::isdigit(input[0]) && input[input.length() - 1] != 'f') {
-		else if (input.length() == 1)
+		
+		if (input.length() == 1)
 			charConvertion(input);
 			
 		else if ((input[0] == '-' && std::isdigit(input[1]))) {
