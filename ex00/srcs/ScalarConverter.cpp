@@ -181,7 +181,10 @@ static void		checkInput(str input) {
 	}
 	else if (input.find('.') != std::string::npos) {
 
-		if (!isValidFloatFormat(input))
+               if (input[0] == '-' && isValidFloatFormat(input.substr(1)))
+           		 doubleConvertion(input);		
+		
+		else if (!isValidFloatFormat(input))
 		      nanConvertion2();		
 			
 		else
