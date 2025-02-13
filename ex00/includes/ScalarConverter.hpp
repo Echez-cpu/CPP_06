@@ -23,7 +23,7 @@ class ScalarConverter {
 ScalarConverter 	&operator=(ScalarConverter const &original_copy);
 
 public:
-		static void	convert(str &lit);
+		static void	convert(const str &lit);
 
 };
 
