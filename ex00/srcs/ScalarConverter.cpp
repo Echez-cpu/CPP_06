@@ -148,6 +148,9 @@ static void		checkInput(str input) {
 		
 		if (input.length() == 1)
 			charConvertion(input);
+
+		else if (input == "nan")
+			nanConvertion();				
 			
 		else if ((input[0] == '-' && std::isdigit(input[1]))) {
 			int value;
@@ -165,8 +168,8 @@ static void		checkInput(str input) {
 			minInfConvertion();
 	    else if (input == "+inf" || input == "+inff")
 			maxInfConvertion();
-	    else if (input == "nan" || input == "nanf")
-			nanConvertion();
+	    else if (input == "nanf")
+		       nanConvertion();
 		
 	else if (input[input.length() - 1] == 'f') {
 
