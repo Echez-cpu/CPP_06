@@ -145,6 +145,6 @@ static void		checkInput(str input) {
 		error();
 }
 
-void	ScalarConverter::convert(str input) {
+void	ScalarConverter::convert(str &lit) {
 	checkInput(input);
 }
