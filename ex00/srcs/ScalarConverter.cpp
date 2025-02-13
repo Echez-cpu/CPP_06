@@ -210,3 +210,49 @@ static void		checkInput(str input) {
 void	ScalarConverter::convert(const str &lit) {
 	checkInput(lit);
 }
+
+
+
+
+
+/*void ScalarConverter::convert(const std::string &literal) {
+    char c;
+    int i;
+    float f;
+    double d;
+
+    if (literal.length() == 1 && !isdigit(literal[0])) {
+        c = literal[0];
+        i = static_cast<int>(c);
+        f = static_cast<float>(c);
+        d = static_cast<double>(c);
+    } 
+    else {
+        char* end;
+        double value = strtod(literal.c_str(), &end);
+
+        if (*end && std::string(end) != "f") {
+            std::cerr << "Conversion impossible" << std::endl;
+            return;
+        }
+
+        i = static_cast<int>(value);
+        f = static_cast<float>(value);
+        d = static_cast<double>(value);
+    }
+
+    if (isprint(i))
+        std::cout << "char: '" << static_cast<char>(i) << "'" << std::endl;
+    else if (i >= 0 && i <= 127)
+        std::cout << "char: Non displayable" << std::endl;
+    else
+        std::cout << "char: impossible" << std::endl;
+
+    if (d >= std::numeric_limits<int>::min() && d <= std::numeric_limits<int>::max())
+        std::cout << "int: " << i << std::endl;
+    else
+        std::cout << "int: impossible" << std::endl;
+
+    std::cout << "float: " << f << "f" << std::endl;
+    std::cout << "double: " << d << std::endl;
+}*/
