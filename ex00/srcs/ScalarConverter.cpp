@@ -1,7 +1,7 @@
 #include "../includes/ScalarConverter.hpp"
 
 static void		charConvertion(str input) {
-	std::cout << "char: " << input[0] << std::endl;
+	std::cout << "char: '" << input[0] << "'" << std::endl;
 	std::cout << "int: " << static_cast<int>(input[0]) << std::endl;
 	std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(input[0]) << "f" << std::endl;
 	std::cout << "double: " << std::fixed << std::setprecision(1) << static_cast<double>(input[0]) << std::endl;
