@@ -13,6 +13,8 @@ int main() {
 
     std::cout << "Deserialized Data -> Name: " << deserializedData->name << ", Age: " << deserializedData->age << std::endl;
 
+   // deserializedData = NULL; 
+        
     if (deserializedData == &originalData)
         std::cout << "Serialization and deserialization successful!" << std::endl;
     else
