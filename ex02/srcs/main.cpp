@@ -49,3 +49,35 @@ void identify(Base& p) {
 	} 
 	catch (const std::exception&) {}
 }
+
+
+
+Base* generate() {
+	int n = rand() % 3;
+	if (n == 0) {
+		std::cout << "New A created." << std::endl;
+		return new A;
+	}
+	else if (n == 1) {
+		std::cout << "New B created." << std::endl;
+		return new B;
+	}
+	else {
+		std::cout << "New C created." << std::endl;
+		return new C;
+	}
+}
+
+int main() {
+	std::srand(std::time(NULL));
+
+	Base* ptr_ref = generate();
+
+	identify(ptr_ref);
+	identify(*ptr_ref);
+
+	delete ptr;
+	return 0;
+}
+
+
