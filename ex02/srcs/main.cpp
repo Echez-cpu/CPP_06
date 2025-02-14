@@ -76,7 +76,7 @@ int main() {
 	identify(ptr_ref);
 	identify(*ptr_ref);
 
-	delete ptr;
+	delete ptr_ref;
 	return 0;
 }
 
