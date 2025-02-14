@@ -21,6 +21,31 @@ void identify(Base* p) {
         std::cout << "The pointer is of type C." << std::endl;
     }
     else {
-        std::cout << "Unknown type." << std::endl; // Handle unexpected types
+        std::cout << "Unknown type." << std::endl;
     }
+}
+
+
+
+void identify(Base& p) {
+	try {
+		(void)dynamic_cast<A&>(p);  // using void to silence compiler warning of unused variable
+		std::cout << "The reference is of type A." << std::endl;
+		return;
+	} 
+	catch (const std::exception&) {}
+
+	try {
+		(void)dynamic_cast<B&>(p);
+		std::cout << "The reference is of type B." << std::endl;
+		return;
+	} 
+	catch (const std::exception&) {}
+
+	try {
+		(void)dynamic_cast<C&>(p);
+		std::cout << "The reference is of type C." << std::endl;
+		return;
+	} 
+	catch (const std::exception&) {}
 }
