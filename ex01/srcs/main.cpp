@@ -2,7 +2,7 @@
 
 int main() {
     Data originalData;
-    originalData.name = "John Doe";
+    originalData.name = "Jesus is Lord";
     originalData.age = 30;
 
     
